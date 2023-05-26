@@ -27,6 +27,8 @@ app.use(
 );
 
 app.use("/auth", authRoute);
-
+app.get('/',(req,res)=>{
+	res.send("app is working")
+})
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listenting on port ${port}...`));
